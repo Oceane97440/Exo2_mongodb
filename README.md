@@ -15,11 +15,39 @@ Crée des role
 Pouvoir se logé avec un id mdp avoir sont interface utilisateur
 
 # Techno
-Font:HTML5/CSS3/Js/Jquery/Bootstrap
+Font:
+<ul>
+<li>
+HTML5
+CSS3
+Js
+Jquere
+Bootstrap
+</li>
+</ul>
 Back:
+<ul>
+<li>
 node.js
 express
 mongodb
 mongous
 sequelize
 ejs
+</li>
+</ul>
+# Structure basse de donnée
+-Table:Users
+<ul>
+<li>
+Noms: string
+Prenoms :  string
+Genres (0:H 1:F): boolean
+Dob(date naissance):date
+Ville:string
+DateChoisi
+</li>
+</ul>
+
+
+
