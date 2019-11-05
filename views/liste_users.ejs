@@ -55,21 +55,26 @@
                                   </tr>
                                 </thead>
                                 <tbody>
+                                
+                        <% if (users) { %>
+                                           
 
 
-                                  <tr><% users.forEach(function(users) { %>
-                                    <th scope="row"><%= users._id %></th>
-                                    <td><%= users.nom %></td>
-                                    <td><%= users.prenom %></td>
-                                    <td><%= users.genre %></td>
-                                    <td><%= users.ville %></td>
-                                    <td><%= users.domaine %></td>
-                                    <td><%= users.dob %></td>
-                                    <td><%= users.dateChoisi %></td>
+                            <tr> 
+                                    <% for(var i = 0; i < users.length; i++) { %>
+                                        <th scope="row"><%= (i + 1) %></th>
+                                        <td><%= users[i].nom %></td>
+                                        <td><%= users[i].prenom %></td>
+                                        <td><%= users[i].genre %></td>
+                                        <td><%= users[i].ville %></td>
+                                        <td><%= users[i].domaine %></td>
+                                        <td><%= users[i].dob %></td>
+                                        <td><%= users[i].dateChoisi %></td>
 
-                                  </tr>
-                                  
-                                  <% }); %>
+                             </tr>
+    
+                                     <% } %>
+                        <% } %>
 
                                 </tbody>
                              </table> 
@@ -88,59 +93,60 @@
    
 <div class="container">
      
-    <form method="POST" role="form" action="/add" class="form-horizontal">
+    <form method="POST" role="form" action="/add" class="form-horizontal"style="padding-bottom: 20px;">
             <hr>
             <h4 class="text-center">Formulaire</h4>
             <hr>
             <div class="row">
               <div class="col-md-4 col-sm-4">
                     <label for="inputNom">Nom</label>
-                <input type="text" class="form-control is-valid"id="inputNom" placeholder="Nom" name="nom">
+                <input type="text" class="form-control "id="inputNom" placeholder="Nom" name="nom">
               </div>
               <div class="col-md-4 col-sm-4">
                     <label for="inputPrenom">Prenom</label>
-                <input type="text" class="form-control is-valid" id="inputPrenom" placeholder="Prenom" name="prenom">
+                <input type="text" class="form-control " id="inputPrenom" placeholder="Prenom" name="prenom">
               </div>
               <div class="col-md-4 col-sm-4">
                     <label for="inputPrenom">Genre</label>
-                <input type="text" class="form-control is-valid" id="inputPrenom" placeholder="H/F" name="genre">
+                <input type="text" class="form-control " id="inputPrenom" placeholder="H/F" name="genre">
               </div>
             </div>
             <div class="row">
                     <div class="col-md-4 col-sm-4">
                             <label for="inputVille">Ville</label>
-                      <input type="text" class="form-control is-valid" id="inputVille" placeholder="Ville" name="ville">
+                      <input type="text" class="form-control " id="inputVille" placeholder="Ville" name="ville">
                     </div>
                     <div class="col-md-4 col-sm-4">
                             <label for="inputDomaine">Domaine</label>
-                      <input type="text" class="form-control is-valid" id="inputDomaine" placeholder="Pas plus de 50 caractère" name="domaine">
+                      <input type="text" class="form-control " id="inputDomaine" placeholder="Pas plus de 50 caractère" name="domaine">
                     </div>
-                    
+                    <div class="col-md-4 col-sm-4">
+                            <label for="inputDomaine">Choisir votre image</label>
+                      <input type="file" class="form-control " id="inputDomaine" placeholder="Upload photo jpg/png" >
+                    </div>
             </div>
             <div class="row">
                     <div class="col-md-4 col-sm-4">
                             <label for="inputDob">Date de naissance</label>
-                      <input type="text" class="form-control is-valid" id="inputDob" placeholder="00/00/0000" name="dob">
+                      <input type="date" class="form-control " id="inputDob" placeholder="00/00/0000" name="dob">
                     </div>
                     <div class="col-md-4 col-sm-4">
                             <label for="inputdatechoisi">Date choisi</label>
-                      <input type="text" class="form-control is-valid" id="inputdatechoisi"placeholder="02/11/2019" name="dateChoisi">
+                      <input type="date" class="form-control " id="inputdatechoisi"placeholder="02/11/2019" name="dateChoisi">
+                    </div>
+                    <div class="col-md-4 col-sm-4" style="padding-top: 30px;">
+                            <button type="submit" class="btn btn-primary">Valider</button>
+
                     </div>
                     
             </div>
-            <div class="row">
-                <div class="col-md-4" style="padding-top: 30px;">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
+           
 
 
 
 
     </form>
 </div>
-
-
 
 
 
