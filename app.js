@@ -1,5 +1,6 @@
 const Express = require("express");
 const BodyParser = require("body-parser");
+//const fileUpload = require('express-fileupload');
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
 
@@ -14,6 +15,7 @@ app.set('views engine','ejs');
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: true }));
 
+app.use(fileUpload());
 
 var database, collection;
 
@@ -26,3 +28,4 @@ const users = require('./routes/users');
 
 app.use('/', users)
 
+//route upload

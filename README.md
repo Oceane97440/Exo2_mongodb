@@ -27,31 +27,31 @@ Bootstrap
 </ul>
 Back:
 <ul>
-<li>
-node.js
-express
-mongodb
-mongous
-sequelize
-ejs
-</li>
+
+<li>node.js</li>
+<li>express</li>
+<li>mongodb</li>
+<li>mongous</li>
+<li>sequelize<li>
+<li>ejs</li>
+
 </ul>
 
 # Structure basse de donnée
 
 -Table:Users
 <ul>
-<li>
-Noms: string
-Prenoms :  string
-Genres :string
-Dob(date naissance):date
-Ville:string
-DateChoisi:date
-</li>
+<li>Noms: string</li>
+<li>Prenoms :  string</li>
+<li>Genres :string<li>
+<li>Dob(date naissance):date</li>
+<li>Ville:string</li>
+<li>DateChoisi:date</li>
+
 </ul>
 
 # Progression:
+
 -Creaction de la bdd
 -Struture du repo
 -Formulaire crée
