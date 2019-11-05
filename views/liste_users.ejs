@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Formulaire</title>
+</head>
+<body>
+        
+
+      
+        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+            
+                <div class="collapse navbar-collapse" id="navbarText">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link" href="#">Liste utilisateurs <span class="sr-only">(current)</span></a>
+                    </li>
+                
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Gagnant</a>
+                    </li>
+                  </ul>
+                  <span class="navbar-text">
+                 Connexion     
+                </span>
+                </div>
+              </nav>
+
+    <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-4" style="margin-top: 30px; text-align: center" >
+                        <hr>
+                        <h4 class="text-center">Liste utilisateurs</h4>
+                        <hr>
+
+
+                        <table class="table table-striped">
+                                <thead class="thead-dark">
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Noms</th>
+                                    <th scope="col">Prenoms</th>
+                                    <th scope="col">Genre</th>
+                                    <th scope="col">Ville</th>
+                                    <th scope="col">Domaine</th>
+                                    <th scope="col">Date de naissance</th>
+                                    <th scope="col">Date choisi</th>
+
+                                  </tr>
+                                </thead>
+                                <tbody>
+
+
+                                  <tr><% calculs.forEach(function(calcul) { %>
+                                    <th scope="row"><%= calcul._id %></th>
+                                    <td><%= calcul.nom %></td>
+                                    <td><%= calcul.prenom %></td>
+                                    <td><%= calcul.genre %></td>
+                                    <td><%= calcul.ville %></td>
+                                    <td><%= calcul.domaine %></td>
+                                    <td><%= calcul.dob %></td>
+                                    <td><%= calcul.dateChoisi %></td>
+
+                                  </tr>
+                                  
+                                  <% }); %>
+
+                                </tbody>
+                             </table> 
+              
+
+
+
+
+
+                </div>
+
+
+            </div>
+
+    </div>
+   
+<div class="container">
+     
+    <form method="POST" role="form" action="/add" class="form-horizontal">
+            <hr>
+            <h4 class="text-center">Formulaire</h4>
+            <hr>
+            <div class="row">
+              <div class="col-md-4 col-sm-4">
+                    <label for="inputNom">Nom</label>
+                <input type="text" class="form-control is-valid"id="inputNom" placeholder="Nom" name="nom">
+              </div>
+              <div class="col-md-4 col-sm-4">
+                    <label for="inputPrenom">Prenom</label>
+                <input type="text" class="form-control is-valid" id="inputPrenom" placeholder="Prenom" name="prenom">
+              </div>
+              <div class="col-md-4 col-sm-4">
+                    <label for="inputPrenom">Genre</label>
+                <input type="text" class="form-control is-valid" id="inputPrenom" placeholder="H/F" name="genre">
+              </div>
+            </div>
+            <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                            <label for="inputVille">Ville</label>
+                      <input type="text" class="form-control is-valid" id="inputVille" placeholder="Ville" name="ville">
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                            <label for="inputDomaine">Domaine</label>
+                      <input type="text" class="form-control is-valid" id="inputDomaine" placeholder="Pas plus de 50 caractère" name="domaine">
+                    </div>
+                    
+            </div>
+            <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                            <label for="inputDob">Date de naissance</label>
+                      <input type="text" class="form-control is-valid" id="inputDob" placeholder="00/00/0000" name="dob">
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                            <label for="inputdatechoisi">Date choisi</label>
+                      <input type="text" class="form-control is-valid" id="inputdatechoisi"placeholder="02/11/2019" name="dateChoisi">
+                    </div>
+                    
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="padding-top: 30px;">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+
+
+
+
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

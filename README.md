@@ -54,8 +54,8 @@ DateChoisi:date
 # Progression:
 -Creaction de la bdd
 -Struture du repo
-
-
-
+-Formulaire crée
+-J'arrive a afficher les données
+-En cours pour enregistre les données via un formulaire
 
 
