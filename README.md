@@ -36,18 +36,26 @@ sequelize
 ejs
 </li>
 </ul>
+
 # Structure basse de donnée
+
 -Table:Users
 <ul>
 <li>
 Noms: string
 Prenoms :  string
-Genres (0:H 1:F): boolean
+Genres :string
 Dob(date naissance):date
 Ville:string
-DateChoisi
+DateChoisi:date
 </li>
 </ul>
+
+# Progression:
+-Creaction de la bdd
+-Struture du repo
+
+
 
 
 
