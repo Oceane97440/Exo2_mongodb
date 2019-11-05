@@ -36,7 +36,8 @@ controller.save=(req,res)=>{
         var domaine = req.body.domaine; 
         var dob = req.body.dob; 
         var dateChoisi = req.body.dateChoisi; 
-   
+        var photo = req.body.photo; 
+
       
         var data = { 
             "nom": nom, 
@@ -45,7 +46,8 @@ controller.save=(req,res)=>{
             "ville": ville, 
             "domaine": domaine, 
             "dob": dob, 
-            "dateChoisi": dateChoisi, 
+            "dateChoisi": dateChoisi,
+            "photo":photo 
     
         } 
          console.log(data)

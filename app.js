@@ -1,6 +1,6 @@
 const Express = require("express");
 const BodyParser = require("body-parser");
-//const fileUpload = require('express-fileupload');
+const fileUpload = require('express-fileupload');
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
 
@@ -11,7 +11,6 @@ var app = Express();
 
 app.set('views', __dirname + '/views');
 app.set('views engine','ejs');
-
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: true }));
 
@@ -28,4 +27,13 @@ const users = require('./routes/users');
 
 app.use('/', users)
 
-//route upload
+app.post('/upload', function(req, res) {
+    console.log(req.files.photo); // the uploaded file object
+  });
+  app.use(fileUpload({
+    limits: { fileSize: 50 * 1024 * 1024 },
+  }));
+  app.use(fileUpload({
+    useTempFiles : true,
+    tempFileDir : '/tmp/'
+}));

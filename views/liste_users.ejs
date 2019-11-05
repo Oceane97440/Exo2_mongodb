@@ -45,6 +45,8 @@
                                     <th scope="col">Domaine</th>
                                     <th scope="col">Date de naissance</th>
                                     <th scope="col">Date choisi</th>
+                                    <th scope="col">Photo profil</th>
+
 
                                   </tr>
                                 </thead>
@@ -64,6 +66,7 @@
                                         <td><%= users[i].domaine %></td>
                                         <td><%= users[i].dob %></td>
                                         <td><%= users[i].dateChoisi %></td>
+                                        <td><%= users[i].photo %></td>
 
                              </tr>
     
@@ -116,7 +119,7 @@
                     </div>
                     <div class="col-md-4 col-sm-4">
                             <label for="inputDomaine">Choisir votre image</label>
-                      <input type="file" class="form-control " id="inputDomaine" placeholder="Upload photo jpg/png" >
+                      <input type="file" class="form-control " id="inputDomaine" placeholder="Upload photo jpg/png" name="photo">
                     </div>
             </div>
             <div class="row">
@@ -141,7 +144,6 @@
 
     </form>
 </div>
-
 
 
 
