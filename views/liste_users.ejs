@@ -57,15 +57,15 @@
                                 <tbody>
 
 
-                                  <tr><% calculs.forEach(function(calcul) { %>
-                                    <th scope="row"><%= calcul._id %></th>
-                                    <td><%= calcul.nom %></td>
-                                    <td><%= calcul.prenom %></td>
-                                    <td><%= calcul.genre %></td>
-                                    <td><%= calcul.ville %></td>
-                                    <td><%= calcul.domaine %></td>
-                                    <td><%= calcul.dob %></td>
-                                    <td><%= calcul.dateChoisi %></td>
+                                  <tr><% users.forEach(function(users) { %>
+                                    <th scope="row"><%= users._id %></th>
+                                    <td><%= users.nom %></td>
+                                    <td><%= users.prenom %></td>
+                                    <td><%= users.genre %></td>
+                                    <td><%= users.ville %></td>
+                                    <td><%= users.domaine %></td>
+                                    <td><%= users.dob %></td>
+                                    <td><%= users.dateChoisi %></td>
 
                                   </tr>
                                   
@@ -139,11 +139,6 @@
 
     </form>
 </div>
-
-
-
-
-
 
 
 

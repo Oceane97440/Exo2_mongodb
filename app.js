@@ -14,6 +14,7 @@ app.set('views engine','ejs');
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: true }));
 
+
 var database, collection;
 
 app.listen(3000, () => {

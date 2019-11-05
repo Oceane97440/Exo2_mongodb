@@ -19,16 +19,15 @@ MongoClient.connect(CONNECTION_URL, { useNewUrlParser: true }, (error, client) =
 controller.index = (req, res) => {
     //récupère les résultats
 
-    collection.find().toArray(function(err, calculs){
+    collection.find().toArray(function(err, users){
 
-            res.render('liste_users.ejs',{calculs:calculs});
+            res.render('liste_users.ejs',{users:users});
         });
 
 };
 
 controller.save=(req,res)=>{
 
-    app.post('/ad', function(req,res){ 
 
         var nom = req.body.nom; 
         var prenom = req.body.prenom; 
@@ -37,7 +36,7 @@ controller.save=(req,res)=>{
         var domaine = req.body.domaine; 
         var dob = req.body.dob; 
         var dateChoisi = req.body.dateChoisi; 
-    
+   
       
         var data = { 
             "nom": nom, 
@@ -49,14 +48,15 @@ controller.save=(req,res)=>{
             "dateChoisi": dateChoisi, 
     
         } 
-        db.collection('utilisateur').insertOne(data,function(err, collection){ 
+         console.log(data)
+         database.collection('utilisateur').insertOne(data,function(err, collection){ 
             if (err) throw err; 
             console.log("Les donnes sont enregistré"); 
                   
         }); 
               
-        return res.redirect('liste_users.ejs'); 
-    }) 
+        return res.redirect('/'); 
+    
 
     
 }

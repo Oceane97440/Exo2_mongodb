@@ -57,5 +57,6 @@ DateChoisi:date
 -Formulaire crée
 -J'arrive a afficher les données
 -En cours pour enregistre les données via un formulaire
+-Ajout de donnée sauf photo
 
 
