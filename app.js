@@ -10,11 +10,13 @@ const DATABASE_NAME = "utilisateurs";
 
 var app = express();
 
+//Indique qu'on utilise express ejs
 app.set('views', __dirname + '/views');
 app.set('views engine','ejs');
+
+//Ressource utiliser
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: true }));
-
 app.use(fileUpload());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -28,6 +30,13 @@ app.listen(3000, () => {
 const users = require('./routes/users');
 
 app.use('/', users)
+
+// Route vers form.js
+const form=require('./routes/form');
+
+app.use('/formulaire', form)
+
+
 
 
 

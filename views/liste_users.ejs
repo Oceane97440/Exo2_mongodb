@@ -16,9 +16,13 @@
                   <ul class="navbar-nav mr-auto">
                    
                     <li class="nav-item ">
-                      <a class="nav-link" href="liste_users">Liste utilisateurs <span class="sr-only">(current)</span></a>
+                                <!-- Importation des routes pour la nav -->
+                      <a class="nav-link" href="/">Liste utilisateurs <span class="sr-only">(current)</span></a>
                     </li>
-                
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/formulaire">Formulaire </a>
+                      </li>
+                  
                     <li class="nav-item">
                       <a class="nav-link" href="#">Gagnant</a>
                     </li>
@@ -26,6 +30,8 @@
                   <span class="navbar-text">Connexion</span>
                 </div>
         </nav>
+
+
     <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-4" style="margin-top: 30px; text-align: center" >
@@ -89,67 +95,7 @@
 
     </div>
    
-<div class="container">
-     
-    <form method="POST" role="form" action="/add" class="form-horizontal"style="padding-bottom: 20px;"enctype="multipart/form-data">
-            <hr>
-            <h4 class="text-center">Formulaire</h4>
-            <hr>
-            <div class="row">
-              <div class="col-md-4 col-sm-4">
-                    <label for="inputNom">Nom</label>
-                <input type="text" class="form-control "id="inputNom" placeholder="Nom" name="nom">
-              </div>
-              <div class="col-md-4 col-sm-4">
-                    <label for="inputPrenom">Prenom</label>
-                <input type="text" class="form-control " id="inputPrenom" placeholder="Prenom" name="prenom">
-              </div>
-              <div class="col-md-4 col-sm-4">
-                    <label for="inputPrenom">Genre</label>
-                <input type="text" class="form-control " id="inputPrenom" placeholder="H/F" name="genre">
-              </div>
-            </div>
-            <div class="row">
-                    <div class="col-md-4 col-sm-4">
-                            <label for="inputVille">Ville</label>
-                      <input type="text" class="form-control " id="inputVille" placeholder="Ville" name="ville">
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                            <label for="inputDomaine">Domaine</label>
-                      <input type="text" class="form-control " id="inputDomaine" placeholder="Pas plus de 50 caractère" name="domaine">
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <label for="photo">Choisir votre image</label>
-                                <input type="file"  class="form-control " id="photo"  name="photo">
-                   
-                                <img class="photo-personne" src="uploads/butterfly.jpg" >
-                
-                
-                
-                </div>
-            </div>
-            <div class="row">
-                    <div class="col-md-4 col-sm-4">
-                            <label for="inputDob">Date de naissance</label>
-                      <input type="date" class="form-control " id="inputDob" placeholder="00/00/0000" name="dob">
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                            <label for="inputdatechoisi">Date choisi</label>
-                      <input type="date" class="form-control " id="inputdatechoisi"placeholder="02/11/2019" name="dateChoisi">
-                    </div>
-                    <div class="col-md-4 col-sm-4" style="padding-top: 30px;">
-                            <button type="submit" class="btn btn-primary">Valider</button>
 
-                    </div>
-                    
-            </div>
-           
-
-
-
-
-    </form>
-</div>
 
 
 

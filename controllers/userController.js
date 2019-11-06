@@ -25,6 +25,14 @@ controller.index = (req, res) => {
         });
 
 };
+controller.formindex = (req, res) => {
+    //récupère les résultats
+
+    collection.find().toArray(function(err, users){
+
+            res.render('form.ejs',{users:users});
+        });
+};
 
 controller.save=(req,res)=>{
 
@@ -50,13 +58,15 @@ controller.save=(req,res)=>{
             "photo":photo 
     
         } 
-         console.log(data)
+           console.log(data)
+
          database.collection('utilisateur').insertOne(data,function(err, collection){ 
             if (err) throw err; 
             console.log("Les donnes sont enregistré"); 
                   
         }); 
-              
+           
+
         return res.redirect('/'); 
     
 
