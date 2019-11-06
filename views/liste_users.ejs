@@ -16,7 +16,7 @@
                   <ul class="navbar-nav mr-auto">
                    
                     <li class="nav-item ">
-                      <a class="nav-link" href="#">Liste utilisateurs <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="liste_users">Liste utilisateurs <span class="sr-only">(current)</span></a>
                     </li>
                 
                     <li class="nav-item">
@@ -58,6 +58,7 @@
 
                             <tr> 
                                     <% for(var i = 0; i < users.length; i++) { %>
+                                        
                                         <th scope="row"><%= (i + 1) %></th>
                                         <td><%= users[i].nom %></td>
                                         <td><%= users[i].prenom %></td>
@@ -66,8 +67,8 @@
                                         <td><%= users[i].domaine %></td>
                                         <td><%= users[i].dob %></td>
                                         <td><%= users[i].dateChoisi %></td>
-                                        <td><%= users[i].photo %></td>
-
+                                        <td> <img class="photo-personne" src="uploads/<%= users[i].photo %>" alt="<%= users[i].photo %>"></td>
+                                       
                              </tr>
     
                                      <% } %>
@@ -90,7 +91,7 @@
    
 <div class="container">
      
-    <form method="POST" role="form" action="/add" class="form-horizontal"style="padding-bottom: 20px;">
+    <form method="POST" role="form" action="/add" class="form-horizontal"style="padding-bottom: 20px;"enctype="multipart/form-data">
             <hr>
             <h4 class="text-center">Formulaire</h4>
             <hr>
@@ -118,9 +119,14 @@
                       <input type="text" class="form-control " id="inputDomaine" placeholder="Pas plus de 50 caractère" name="domaine">
                     </div>
                     <div class="col-md-4 col-sm-4">
-                            <label for="inputDomaine">Choisir votre image</label>
-                      <input type="file" class="form-control " id="inputDomaine" placeholder="Upload photo jpg/png" name="photo">
-                    </div>
+                        <label for="photo">Choisir votre image</label>
+                                <input type="file"  class="form-control " id="photo"  name="photo">
+                   
+                                <img class="photo-personne" src="uploads/butterfly.jpg" >
+                
+                
+                
+                </div>
             </div>
             <div class="row">
                     <div class="col-md-4 col-sm-4">
