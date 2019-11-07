@@ -17,14 +17,14 @@ Pouvoir se logé avec un id mdp avoir sont interface utilisateur
 # Techno
 Font:
 <ul>
-<li>
-HTML5
-CSS3
-Js
-Jquere
-Bootstrap
-</li>
+  <li>HTML5</li>
+  <li>CSS</li>
+  <li>Js</li>
+  <li>Jquere</li>
+ <li>Bootstrap</li>
+ 
 </ul>
+
 Back:
 <ul>
 
@@ -32,7 +32,7 @@ Back:
 <li>express</li>
 <li>mongodb</li>
 <li>mongous</li>
-<li>sequelize<li>
+<li>upload file</li>
 <li>ejs</li>
 
 </ul>
@@ -42,31 +42,31 @@ Back:
 -Table:Users
 <ul>
 <li>Noms: string</li>
-<li>Prenoms :  string</li>
-<li>Genres :string<li>
-<li>Dob(date naissance):date</li>
+<li>Prenoms :string</li>
+<li>Genres :string</li>
+<li>Domaine :string</li>
 <li>Ville:string</li>
+<li>Photo:string</li>
+<li>Dob(date naissance):date</li>
 <li>DateChoisi:date</li>
 
 </ul>
 
 # Progression:
 
- <input type="checkbox" checked>
- <label for="coding">-Creaction de la bdd</label>
-<input type="checkbox" checked>
- <label for="coding">Struture du repo</label>
+<ul>
+ 
+ <li>Creaction de la bdd</li>
+ <li>Struture du repo</li>
+ <li>Formulaire crée</li>
+ <li>J'arrive a afficher les données</li>
+ <li>En cours pour enregistre les données via un formulaire</li>
+ <li>Ajout de donnée sauf photo </li>
+ <li>Ajout d'une vue liste et form</li>
+ <li>Image ne s'upload pas</li>
+ <li>Image s'enregiste et upload </li>
 
 
-
-
--
--Formulaire crée
--J'arrive a afficher les données
--En cours pour enregistre les données via un formulaire
--Ajout de donnée sauf photo 
--Ajout d'une vue liste et form
--Image ne s'upload pas
--Image s'enregiste et upload 
+</ul>
 
 
