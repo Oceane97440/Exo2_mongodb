@@ -1,8 +1,8 @@
 var router = require('express').Router();
 
-var userController = require('../controllers/userController')
+var usersController = require('../controllers/userController')
 
-router.get('/', userController.index);
+router.get('/', usersController.index);
 
 
 module.exports = router;

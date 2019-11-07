@@ -11,7 +11,7 @@
 <body>
         
 
-        <nav class="navbar navbar-expand-lg navbar navbar navbar-dark bg-primary" style="background-color: #ff6429d1!important;">
+        <nav class="navbar navbar-expand-lg navbar navbar navbar-dark bg-dark" >
             
                 <div class="collapse navbar-collapse" id="navbarText">
                   <ul class="navbar-nav mr-auto">
@@ -35,28 +35,27 @@
 
     <div class="container">
             <div class="row">
-                <div class="col-md-12 col-sm-4" style="margin-top: 30px; text-align: center" >
-                        <hr>
-                        <h4 class="text-center">Notre gagnant du jour :)</h4>
-                        <hr>
-<div class="justify-content-center">
-
-
-                        <% if (users) { %>
-                            <% for(var i = 0; i < users.length; i++) { %>
+                    <hr>
+                    <h4 class="text-center" style="padding-top: 20px;">Notre gagnant du jour :)</h4>
+                    <hr>
+                <!-- <div class="col-md-2"></div> -->
+                <div class="col-md-8 offset-md-4" style="margin-top: 30px; text-align: center" >
+                
+                        <% if (user) { %>
+                      
                     
-                        <div class="card text-white bg-dark  mb-3 " style="width: 18rem;">
-                            <img class="img-thumbnail rounded-circl mx-auto d-block" src="uploads/<%= users[i].photo %>" alt="<%= users[i].photo %>" height="200" width="150"
+                        <div class="card align-items-center text-white bg-dark  mb-3 " style="width: 18rem;">
+                            <img class="img-thumbnail rounded-circl mx-auto d-block" src="uploads/<%= user[0].photo %>" alt="<%= user[0].photo %>" height="200" width="150"
                             style="border-radius: 85px;margin: 10px;">
                             <div class="card-body">
                                 <hr>
-                                <p class="card-text"><%= users[i].nom %> <%= users[i].prenom %></p>
+                                <p class="card-text"><%= user[0].nom %> <%= user[0].prenom %></p>
 
                                 <hr>
-                              <p class="card-text">Genre: <%= users[i].genre %></p>
-                              <p class="card-text">Ville: <%= users[i].ville %></p>
-                              <p class="card-text">Domaine: <%= users[i].domaine %></p>
-                              <p class="card-text">Date aniverssaire:<br><%= users[i].dob %></p>
+                              <p class="card-text">Genre: <%= user[0].genre %></p>
+                              <p class="card-text">Ville: <%= user[0].ville %></p>
+                              <p class="card-text">Domaine: <%= user[0].domaine %></p>
+                              <p class="card-text">Date aniverssaire:<br> <%= user[0].dob %></p>
                     
                     
                     
@@ -66,7 +65,7 @@
                     
                     
                           <% } %>
-                          <% } %>
+                       
 
                         </div>
 
@@ -77,7 +76,6 @@
 
             </div>
 
-    </div>
   
 </body>
 </html>

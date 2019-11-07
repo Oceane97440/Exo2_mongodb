@@ -1,4 +1,5 @@
 //Connetion bdd mongoclient
+
 var MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
 var CONNECTION_URL = "mongodb+srv://oceane08:password974@cluster0-owldh.mongodb.net/test?retryWrites=true&w=majority";
@@ -33,15 +34,17 @@ controller.formindex = (req, res) => {
 };
 
 controller.tirageindex= (req, res) =>{
-    //Chemain vers l'affichage du gagnant
-    var query = { nom: "Molly" };
+    //Chemain vers l'affichage du gagnant 
 
-    collection.find(query).toArray(function(err, users){
+    //collection.find().limit(1).toArray(function(err, user){
 
-        res.render('gagnant.ejs',{users:users});
+    collection.aggregate([{$sample: { size: 1 }}]).toArray(function(err, user){
+        console.log(user)
+        res.render('gagnant.ejs',{user:user});
     });
 
 };
+
 
 
 controller.save=(req,res)=>{

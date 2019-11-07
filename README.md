@@ -66,6 +66,7 @@ Back:
  <li>Image ne s'upload pas</li>
  <li>Image s'enregiste et upload </li>
  <li>Ajout d'un route et vue gagnant pour afficher 1 user </li>
+ <li>Affichage 1 user aleatoir a chaque raifraiche </li>
 
 
 </ul>
