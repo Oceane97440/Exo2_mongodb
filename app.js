@@ -22,6 +22,7 @@ app.use(BodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 var database, collection;
 
 app.listen(3000, () => {
@@ -37,6 +38,12 @@ app.use('/', users)
 const form=require('./routes/form');
 
 app.use('/formulaire', form)
+
+//Route vers gagne.js
+const gagne=require('./routes/gagne');
+
+app.use('/gagnant-tirage',gagne)
+
 
 
 

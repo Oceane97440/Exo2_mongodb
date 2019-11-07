@@ -29,10 +29,19 @@ controller.formindex = (req, res) => {
     //Chemain vers l'affichage du formulaire
 
 
-            res.render('form.ejs');
+        res.render('form.ejs');
 };
 
+controller.tirageindex= (req, res) =>{
+    //Chemain vers l'affichage du gagnant
+    var query = { nom: "Molly" };
 
+    collection.find(query).toArray(function(err, users){
+
+        res.render('gagnant.ejs',{users:users});
+    });
+
+};
 
 
 controller.save=(req,res)=>{

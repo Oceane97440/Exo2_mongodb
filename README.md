@@ -65,6 +65,7 @@ Back:
  <li>Ajout d'une vue liste et form</li>
  <li>Image ne s'upload pas</li>
  <li>Image s'enregiste et upload </li>
+ <li>Ajout d'un route et vue gagnant pour afficher 1 user </li>
 
 
 </ul>
