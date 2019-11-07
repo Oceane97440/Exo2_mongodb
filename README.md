@@ -52,11 +52,21 @@ Back:
 
 # Progression:
 
--Creaction de la bdd
--Struture du repo
+ <input type="checkbox" checked>
+ <label for="coding">-Creaction de la bdd</label>
+<input type="checkbox" checked>
+ <label for="coding">Struture du repo</label>
+
+
+
+
+-
 -Formulaire crée
 -J'arrive a afficher les données
 -En cours pour enregistre les données via un formulaire
--Ajout de donnée sauf photo
+-Ajout de donnée sauf photo 
+-Ajout d'une vue liste et form
+-Image ne s'upload pas
+-Image s'enregiste et upload 
 
 

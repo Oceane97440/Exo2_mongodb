@@ -17,7 +17,7 @@ MongoClient.connect(CONNECTION_URL, { useNewUrlParser: true }, (error, client) =
 
 
 controller.index = (req, res) => {
-    //récupère les résultats
+    //Chemain vers l'affiche les donnée de la bdd
 
     collection.find().toArray(function(err, users){
 
@@ -26,17 +26,23 @@ controller.index = (req, res) => {
 
 };
 controller.formindex = (req, res) => {
-    //récupère les résultats
+    //Chemain vers l'affichage du formulaire
 
-    collection.find().toArray(function(err, users){
 
-            res.render('form.ejs',{users:users});
-        });
+            res.render('form.ejs');
 };
 
+
+
+
 controller.save=(req,res)=>{
+//message erreur si la photos de upload pas
 
+        if (!req.files || Object.keys(req.files).length === 0) {
+          return res.status(400).send('Echec du upload');
+        }
 
+        var photo_file = req.files.photo;
         var nom = req.body.nom; 
         var prenom = req.body.prenom; 
         var genre = req.body.genre; 
@@ -44,7 +50,7 @@ controller.save=(req,res)=>{
         var domaine = req.body.domaine; 
         var dob = req.body.dob; 
         var dateChoisi = req.body.dateChoisi; 
-        var photo = req.body.photo; 
+        var photo = photo_file.name;//req.body.photo; 
 
       
         var data = { 
@@ -59,7 +65,20 @@ controller.save=(req,res)=>{
     
         } 
            console.log(data)
+           console.log(req.files)
 
+
+//Trouve et deplace la photo vers le dossier public/upload
+
+          photo_file.mv(mainDir+'/public/uploads/'+photo_file.name, function(err) {
+            if (err)res
+            //return res.send(err);(affiche l'erreur)
+            return res.status(500).send(err);
+        
+          });
+
+
+//Apres tout traitement les donnée sont enregistré retourne vers la racine
          database.collection('utilisateur').insertOne(data,function(err, collection){ 
             if (err) throw err; 
             console.log("Les donnes sont enregistré"); 
@@ -72,22 +91,6 @@ controller.save=(req,res)=>{
 
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //Important pour export

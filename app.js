@@ -9,6 +9,8 @@ const CONNECTION_URL = "mongodb+srv://oceane08:password974@cluster0-owldh.mongod
 const DATABASE_NAME = "utilisateurs";
 
 var app = express();
+//determine la racine du projet
+mainDir = __dirname;
 
 //Indique qu'on utilise express ejs
 app.set('views', __dirname + '/views');
@@ -38,8 +40,6 @@ app.use('/formulaire', form)
 
 
 
-
-
 //Action upload du fichier image
 app.post('/uploads', function(req, res) {
     console.log(req.files.photo); //requette.files.nom du file 
@@ -51,6 +51,6 @@ app.post('/uploads', function(req, res) {
   }));
   app.use(fileUpload({
     useTempFiles : true,
-    tempFileDir : '/tmp/'
+    tempFileDir : 'C:\tmp' //dossier temporaire
 }));
 
