@@ -36,7 +36,6 @@ controller.formindex = (req, res) => {
 controller.tirageindex= (req, res) =>{
     //Chemain vers l'affichage du gagnant 
 
-    //collection.find().limit(1).toArray(function(err, user){
 
     collection.aggregate([{$sample: { size: 1 }}]).toArray(function(err, user){
         console.log(user)
