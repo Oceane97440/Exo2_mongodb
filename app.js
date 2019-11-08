@@ -2,6 +2,7 @@ const express = require("express");
 const BodyParser = require("body-parser");
 const fileUpload = require('express-fileupload');
 const path = require('path');
+const mongoose = require('mongoose');
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
 
